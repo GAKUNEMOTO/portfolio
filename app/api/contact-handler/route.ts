@@ -10,9 +10,11 @@ export async function POST(req: NextRequest) {
         const transporter = nodeMailer.createTransport({
             service: "gmail",
             auth: {
-                user: process.env.NEXT_PUBLIC_GMAIL_USER, // メールアドレス
-                pass: process.env.NEXT_PUBLIC_GMAIL_PASSWORD // パスワード
-            }
+                user: process.env.NEXT_PUBLIC_GMAIL_USER,
+                pass: process.env.NEXT_PUBLIC_GMAIL_PASSWORD,
+            },
+            debug: true,
+            logger: true,
         });
 
         const mailOptions = {
@@ -33,7 +35,10 @@ export async function POST(req: NextRequest) {
         const info = await transporter.sendMail(mailOptions);
         return NextResponse.json({ message: "成功しました" });
     } catch (err) {
-        console.error(err);
-        return NextResponse.json({ message: "失敗しました" }, { status: 500 });
+        console.error("メール送信エラー:", err);
+        if (err instanceof Error) {
+            return NextResponse.json({ message: "失敗しました", error: err.message }, { status: 500 });
+        }
+        return NextResponse.json({ message: "失敗しました", error: "Unknown error" }, { status: 500 });
     }
 }
