@@ -10,7 +10,7 @@ export default function SkillsCard() {
             <div className='flex items-center'>
               <img
                 className='w-20 h-20 mr-3 flex-shrink-0 dark:filter dark:invert dark:bg-opacity-0'
-                src={`/gaku-portfolio/icons/${skill.icon}.svg`}
+                src={`portfolio/icons/${skill.icon}.svg`}
                 alt={skill.title}
                 title={skill.title}
               />
