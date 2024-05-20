@@ -24,7 +24,7 @@ export default function Navigation() {
                         key={item.label}
                         asChild
                         >
-                            <Link href={`/${item.href}`}>
+                            <Link href={`${item.href}`}>
                             {item.label}
                             </Link>
                     </Button>
