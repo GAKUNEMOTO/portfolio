@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/gaku-portfolio',
+    basePath: '/portfolio',
     output: 'export',
     images: {
         unoptimized: true,
