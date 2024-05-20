@@ -9,19 +9,19 @@ export const skillchar = [
         labels: 'Typescript',
         backgroundColor: '54, 162, 235, 0.5',
         backgroundColorHv:'54, 162, 235, 1',
-        data: 70
+        data: 60
     },
     {
         labels: 'Next.Js',
         backgroundColor: '0, 82, 204, 1',
         backgroundColorHv:'0, 0, 0, 1',
-        data: 70
+        data: 60
     },
     {
         labels: 'Three.Js',
         backgroundColor: '191, 202, 209',
         backgroundColorHv:'191, 202, 209',
-        data: 70
+        data: 30
     },
     {
         labels: 'CSS',
@@ -33,6 +33,6 @@ export const skillchar = [
         labels: 'Tailwind',
         backgroundColor: '134,175,247,0.85',
         backgroundColorHv:'134,175,247,1',
-        data: 70
+        data: 60
     },
 ]as const;

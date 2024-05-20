@@ -17,10 +17,7 @@ export default function SkillsCard() {
               <div className='flex flex-col'>
                 <h3>{skill.title}</h3>
                 <p className='hidden md:block text-muted-foreground'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam obcaecati
-                  similique pariatur ipsum, dolor temporibus consectetur earum reprehenderit fuga
-                  cumque quam delectus exercitationem laboriosam officiis? Sed quidem labore
-                  facilis accusamus.
+                    {skill.description}
                 </p>
               </div>
             </div>
